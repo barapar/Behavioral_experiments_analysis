@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19880b44-9757-4298-8693-dba9187bd113" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/behav_exp_stats.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coefficient_of_variation_analysis.py" afterDir="false" />
-    </list>
+    <list default="true" id="19880b44-9757-4298-8693-dba9187bd113" name="Changes" comment="CV analysis of variation through tthe experimental timescale" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +18,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -42,7 +39,7 @@
     "Python.coefficient_of_variation_analysis.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "working",
     "last_opened_file_path": "/home/lisz/PycharmProjects/behav_exp_stats",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -75,12 +72,41 @@
       <updated>1712477252726</updated>
       <workItem from="1712477254159" duration="246000" />
       <workItem from="1712477520049" duration="2783000" />
-      <workItem from="1712480315907" duration="8598000" />
+      <workItem from="1712480315907" duration="8924000" />
     </task>
+    <task id="LOCAL-00001" summary="CV analysis of variation through tthe experimental timescale">
+      <option name="closed" value="true" />
+      <created>1712490773329</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712490773329</updated>
+    </task>
+    <task id="LOCAL-00002" summary="CV analysis of variation through tthe experimental timescale">
+      <option name="closed" value="true" />
+      <created>1712490854689</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712490854689</updated>
+    </task>
+    <task id="LOCAL-00003" summary="CV analysis of variation through tthe experimental timescale">
+      <option name="closed" value="true" />
+      <created>1712490998242</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712490998242</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CV analysis of variation through tthe experimental timescale" />
+    <option name="LAST_COMMIT_MESSAGE" value="CV analysis of variation through tthe experimental timescale" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
