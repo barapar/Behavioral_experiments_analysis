@@ -70,7 +70,7 @@ posthocs_time = pg.pairwise_tests(dv='cv', within='time_bin', subject='participa
 sign_ph_time = posthocs_time[posthocs_time['p-corr'] < 0.05]
 ############################################################################
 
-# pause duration CV analysiss
+# pause duration CV analysis
 # create a new list to save participant, bin number and its CV value
 list_pd = []
 for pp in df['participant'].unique():
