@@ -29,8 +29,9 @@ def calculate_cv(df):
     cv = df['key_resp_rt'].std() / df['key_resp_rt'].mean()
     return cv
 
-#############################################################################
-# time bins CV analysis
+############################################################################
+### time bins CV analysis
+############################################################################
 # create a new list to save participant, bin number and its CV value
 list_cv = []
 for pp in df['participant'].unique():
@@ -59,8 +60,8 @@ for pp in df['participant'].unique():
 # convert list to dataframe
 df_cv = pd.DataFrame(data=list_cv, columns=['participant', 'time_bin', 'cv'])
 
-#############################################################################
-# run rmANOVA, time bin as a dependent variable
+############################################################################
+# run rmANOVA, time bin within analysis
 result_time = pg.rm_anova(data=df_cv, correction=True, dv='cv', within=['time_bin'], subject='participant',
                           detailed=True, effsize='np2')
 # post hoc t-test
@@ -68,27 +69,44 @@ posthocs_time = pg.pairwise_tests(dv='cv', within='time_bin', subject='participa
                                   padjust='bonf', effsize='eta-square', data=df_cv)
 # Filter significant comparisons
 sign_ph_time = posthocs_time[posthocs_time['p-corr'] < 0.05]
-############################################################################
 
-# pause duration CV analysis
+############################################################################
+### pause duration CV analysis
+############################################################################
 # create a new list to save participant, bin number and its CV value
 list_pd = []
 for pp in df['participant'].unique():
     # subset for 1 subject
     subset = df[df['participant'] == pp]
+    # iterate through pause durations
     for dd in subset['pause_duration'].unique():
-        print(dd)
+        # CV of a subset with one pause duration
         cv = calculate_cv(subset[subset['pause_duration'] == dd])
         # add participant, bin number and its CV value
         list_pd.append([pp, dd, cv])
 
 df_pd = pd.DataFrame(data=list_pd, columns=['participant', 'pause_duration', 'cv'])
 ##############################################################################
-# run rmANOVA, time bin as a dependent variable
+# run rmANOVA, pause duration within analysis
 result_pd = pg.rm_anova(data=df_pd, correction=True, dv='cv', within='pause_duration', subject='participant',
                           detailed=True, effsize='np2')
-# post hoc t-test
-posthocs_pd = pg.pairwise_tests(dv='cv', within='pause_duration', subject='participant',
-                                  padjust='bonf', effsize='eta-square', data=df_pd)
-# Filter significant comparisons
-sign_pd_time = posthocs_pd[posthocs_pd['p-corr'] < 0.05]
+
+############################################################################
+### eccentricity CV analysis
+############################################################################
+# create a new list to save participant, bin number and its CV value
+list_cc = []
+for pp in df['participant'].unique():
+    # subset for 1 subject
+    subset = df[df['participant'] == pp]
+    for cc in subset['eccentricity'].unique():
+        # CV for a subset with 1 eccentricity
+        cv = calculate_cv(subset[subset['eccentricity'] == cc])
+        # add participant, bin number and its CV value
+        list_cc.append([pp, cc, cv])
+
+df_cc = pd.DataFrame(data=list_cc, columns=['participant', 'eccentricity', 'cv'])
+##############################################################################
+# run rmANOVA, time bin as a dependent variable
+result_cc = pg.rm_anova(data=df_cc, correction=True, dv='cv', within='eccentricity', subject='participant',
+                        detailed=True, effsize='np2')
