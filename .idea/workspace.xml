@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19880b44-9757-4298-8693-dba9187bd113" name="Changes" comment="CV analysis of variation through tthe experimental timescale" />
+    <list default="true" id="19880b44-9757-4298-8693-dba9187bd113" name="Changes" comment="CV analysis of variation through tthe experimental timescale">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coefficient_of_variation_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/coefficient_of_variation_analysis.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +49,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -72,7 +75,7 @@
       <updated>1712477252726</updated>
       <workItem from="1712477254159" duration="246000" />
       <workItem from="1712477520049" duration="2783000" />
-      <workItem from="1712480315907" duration="8924000" />
+      <workItem from="1712480315907" duration="11197000" />
     </task>
     <task id="LOCAL-00001" summary="CV analysis of variation through tthe experimental timescale">
       <option name="closed" value="true" />
@@ -98,7 +101,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712490998242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="CV analysis of variation through tthe experimental timescale">
+      <option name="closed" value="true" />
+      <created>1712491004854</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712491004854</updated>
+    </task>
+    <task id="LOCAL-00005" summary="CV analysis of variation through tthe experimental timescale">
+      <option name="closed" value="true" />
+      <created>1712491014327</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712491014327</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

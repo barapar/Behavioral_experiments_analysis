@@ -70,3 +70,25 @@ posthocs_time = pg.pairwise_tests(dv='cv', within='time_bin', subject='participa
 sign_ph_time = posthocs_time[posthocs_time['p-corr'] < 0.05]
 ############################################################################
 
+# pause duration CV analysis
+# create a new list to save participant, bin number and its CV value
+list_pd = []
+for pp in df['participant'].unique():
+    # subset for 1 subject
+    subset = df[df['participant'] == pp]
+    for dd in subset['pause_duration'].unique():
+        print(dd)
+        cv = calculate_cv(subset[subset['pause_duration'] == dd])
+        # add participant, bin number and its CV value
+        list_pd.append([pp, dd, cv])
+
+df_pd = pd.DataFrame(data=list_pd, columns=['participant', 'pause_duration', 'cv'])
+##############################################################################
+# run rmANOVA, time bin as a dependent variable
+result_pd = pg.rm_anova(data=df_pd, correction=True, dv='cv', within='pause_duration', subject='participant',
+                          detailed=True, effsize='np2')
+# post hoc t-test
+posthocs_pd = pg.pairwise_tests(dv='cv', within='pause_duration', subject='participant',
+                                  padjust='bonf', effsize='eta-square', data=df_pd)
+# Filter significant comparisons
+sign_pd_time = posthocs_pd[posthocs_pd['p-corr'] < 0.05]
