@@ -4,6 +4,7 @@ Create separate subset for each questionnaire in the dataset
 import pandas as pd
 from os.path import join as opj
 
+
 # directory of the project
 root_dir = opj('/', 'home', 'lisz', 'Desktop', 'Time_project', 'time_fmri')
 
