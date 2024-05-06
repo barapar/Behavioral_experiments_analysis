@@ -16,8 +16,9 @@ naming_int = 3
 
 # rename columns from "BDI1" to 1 for readability
 for cc in df.columns:
-    # leave participant column untouced
+    # leave participant column untouched
     if not cc == 'participant':
+        # rename column with the specified pattern: everything after the first 3 indeces
         df.rename(columns={cc: cc[naming_int:]}, inplace = True)
 
 ########################################################################################
