@@ -11,7 +11,7 @@ root_dir = opj('/', 'home', 'lisz', 'Desktop', 'Time_project', 'time_fmri')
 out_dir = opj(root_dir, 'questionnaire_datasets')
 
 # open dataset with questionnaire results
-df = pd.read_excel(root_dir + '/FMRI_participants.ods', engine='odf')
+df = pd.read_excel(opj(root_dir, 'FMRI_participants.ods'), engine='odf')
 
 # list of questionnaires to extract from df, in this case it is the beginning of corresponding column names
 list_quest = ['BFI', 'MQT', 'SEQ', 'MSSB']
